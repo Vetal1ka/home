@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>ДЗ</title>
+
+
+<script type="text/javascript">
+
+
+//функции
+
+function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+  }
+
+
+function countDigits(n) {
+   for(var i = 0; n > 1; i++) {
+      n /= 10;
+   }
+   return i;
+}
+
+
+
+//переменные
+
+var a,b,c,doble,x,$random,$rezult; 
+
+// 1
+
+a = randomInteger(0,9);
+b = randomInteger(0,9);
+c = randomInteger(0,9);
+
+
+document.write("1) из_");
+
+document.write(a);
+
+document.write("_");
+
+document.write(b);
+
+document.write("_");
+
+document.write(c);
+
+
+document.write("_наименьшее число :");
+
+if(a < b && a < c ){ x = a;}
+else if(b < a && b < c ){ x = b;}
+else if(c < a && c < b ){ x = c;}
+
+if(a == b && a < c) {document.write(a);}
+else if(b == c && c < a ) {document.write(b);}
+else if(c == a && c < b || c == b && c == x) {document.write(c);}
+else if(a == b && b == c) {document.write("числа идентичны");}
+
+else {document.write(x);}
+
+document.write(" 2)");
+
+
+// 2
+
+random = randomInteger(-999,999);
+
+if(random > 0) { 
+
+nums = countDigits(random);	
+
+if(nums == 3) {$rezult = " положительное 3 символа" ;}
+if(nums == 2) {$rezult = " положительное 2 символа" ;}
+if(nums == 1) {$rezult = " положительное 1 символ" ;}
+
+}
+
+if(random < 0) {
+
+nums = String(random).length;
+
+if(nums == 4) {$rezult = " отрицательное 3 символа в числе" ;}
+if(nums == 3) {$rezult = " отрицательное 2 символа в числе" ;}
+if(nums == 2) {$rezult = " отрицательное 1 символ в числе" ;}
+
+}
+
+
+if(random == 0) {$rezult = "0";}
+
+
+document.write(random);
+document.write($rezult);
+
+
+document.write(" 3)");
+
+
+// 3
+
+
+$random = randomInteger(0,9);
+
+if ($random == 0){ $random = "ноль";}
+else if ($random == 1){ $random = "один";}
+else if($random == 2){ $random = "два";}
+else if($random == 3){ $random = "три";}
+else if($random == 4){ $random = "четыре";}
+else if($random == 5){ $random = "пять";}
+else if($random == 6){ $random = "шесть";}
+else if($random == 7){ $random = "семь";}
+else if($random == 8){ $random = "восемь";}
+else if($random == 9){ $random = "девять";}
+
+document.write($random);
+
+
+document.write(" 4)");
+
+
+// 4
+
+
+$random = randomInteger(1,5);
+
+if ($random == 1){ $random = "плохо";}
+else if ($random == 2){ $random = "неудовлетворительно";}
+else if($random == 3){ $random = "удовлетворительно";}
+else if($random == 4){ $random = "хорошо";}
+else if($random == 5){ $random = "отлично";}
+
+document.write($random );
+
+
+
+document.write(" 5)");
+
+// 5
+
+
+a = randomInteger(1,9);
+b = randomInteger(1,9);
+c = randomInteger(1,9);
+
+
+if (a == b || a == c ){ doble = "есть совпадения: ";}
+else if (b == a || b == c ){ doble = "есть совпадения: ";}
+else if (c == a || c == b ){ $doble = "есть совпадения: ";}
+
+else {doble = "не совпадают ";}
+
+document.write(doble);
+
+document.write(a);
+document.write(b);
+document.write(c);
+
+</script>
+
+</body>
+</html>
+
